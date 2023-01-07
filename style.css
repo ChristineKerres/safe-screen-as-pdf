@@ -1,0 +1,231 @@
+@font-face {
+  font-family: NanumGothic;
+  src: url(/fonts/NanumGothicCoding-Regular.ttf);
+}
+body {
+  font-family: NanumGothic;
+  font-size: 20px;
+  color: black;
+  margin: 20px;
+  /*background-color: rgba(145, 128, 131, 0.824);*/
+  background-image: url(/img/printer.png);
+  height: 900px;
+  background-repeat: no-repeat;
+  background-size: 600px;
+  background-position: center;
+  overflow: hidden;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 95%;
+}
+.button {
+  position: sticky;
+  top: 90%;
+}
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2.1px;
+  justify-content: center;
+  width: 182px;
+  position: sticky;
+  margin-top: 480px;
+  margin-right: 108px;
+}
+.drawer {
+  justify-self: center;
+  background-color: rgba(145, 128, 131, 0.3);
+  border-radius: 3px;
+  width: 23px;
+  height: 21px;
+  cursor: pointer;
+  box-shadow: -4px -4px 4px 0px rgba(189, 189, 189, 0.305),
+    inset -4px -4px 4px 0px rgba(154, 62, 62, 0.25);
+}
+
+#item-1:hover,
+#item-2:hover,
+#item-3:hover,
+#item-4:hover,
+#item-5:hover,
+#item-6:hover,
+#item-7:hover {
+  background-color: rgba(145, 128, 131, 0.8);
+  transform: scale(1.1);
+}
+#onehover,
+#twohover,
+#threehover,
+#fourhover,
+#fivehover,
+#sixhover,
+#sevenhover {
+  opacity: 0;
+  width: 120px;
+  text-align: center;
+
+  /* Position the tooltip */
+  position: fixed;
+  z-index: 1;
+  top: 150px;
+  left: 105%;
+}
+
+#item-1:hover > #onehover,
+#item-2:hover > #twohover,
+#item-3:hover > #threehover,
+#item-4:hover > #fourhover,
+#item-5:hover > #fivehover,
+#item-6:hover > #sixhover,
+#item-7:hover > #sevenhover {
+  opacity: 1;
+}
+
+.print > div {
+  display: none;
+}
+#video,
+#canvas {
+  display: none;
+}
+/* alles von print nicht darstellen
+body.print > div {
+  display: none;
+}*/
+
+/* für alle elemente hidden und visible Klasse aufsschreiben, JS wird dazwischen toggeln*/
+@media print {
+  .print > div {
+    display: block;
+  }
+
+  #canvas {
+    display: block;
+    position: fixed;
+    width: 1280px;
+    height: 960px;
+  }
+
+  body.onePrint .onePrint {
+    display: block;
+    color: black;
+    font-size: 13pt;
+  }
+
+  body.onePrint .twoPrint,
+  body.onePrint .threePrint,
+  body.onePrint .fourPrint,
+  body.onePrint .fivePrint,
+  body.onePrint .sixPrint,
+  body.onePrint .sevenPrint {
+    display: none;
+  }
+
+  body.twoPrint .twoPrint {
+    display: block;
+    color: black;
+    font-size: 13pt;
+  }
+  body.twoPrint .onePrint,
+  body.twoPrint .threePrint,
+  body.twoPrint .fourPrint,
+  body.twoPrint .fivePrint,
+  body.twoPrint .sixPrint,
+  body.twoPrint .sevenPrint {
+    display: none;
+  }
+  body.threePrint .threePrint {
+    display: block;
+    color: black;
+    font-size: 13pt;
+  }
+  body.threePrint .onePrint,
+  body.threePrint .twoPrint,
+  body.threePrint .fourPrint,
+  body.threePrint .fivePrint,
+  body.threePrint .sixPrint,
+  body.threePrint .sevenPrint {
+    display: none;
+  }
+  body.fourPrint .fourPrint {
+    display: block;
+    color: black;
+    font-size: 13pt;
+  }
+  body.fourPrint .onePrint,
+  body.fourPrint .twoPrint,
+  body.fourPrint .threePrint,
+  body.fourPrint .fivePrint,
+  body.fourPrint .sixPrint,
+  body.fourPrint .sevenPrint {
+    display: none;
+  }
+  body.fivePrint .fivePrint {
+    display: block;
+    color: black;
+    font-size: 13pt;
+  }
+  body.fivePrint .onePrint,
+  body.fivePrint .twoPrint,
+  body.fivePrint .threePrint,
+  body.fivePrint .fourPrint,
+  body.fivePrint .sixPrint,
+  body.fivePrint .sevenPrint {
+    display: none;
+  }
+  body.sixPrint .sixPrint {
+    display: block;
+    color: black;
+    font-size: 13pt;
+  }
+  body.sixPrint .onePrint,
+  body.sixPrint .twoPrint,
+  body.sixPrint .threePrint,
+  body.sixPrint .fourPrint,
+  body.sixPrint .fivePrint,
+  body.sixPrint .sevenPrint {
+    display: none;
+  }
+  body.sevenPrint .sevenPrint {
+    display: block;
+    color: black;
+    font-size: 13pt;
+  }
+  body.sevenPrint .onePrint,
+  body.sevenPrint .twoPrint,
+  body.sevenPrint .threePrint,
+  body.sevenPrint .fourPrint,
+  body.sevenPrint .fivePrint,
+  body.sevenPrint .sixPrint {
+    display: none;
+  }
+  .screen > div {
+    display: none;
+  }
+  .title > div {
+    display: none;
+  }
+  #start-camera {
+    display: none;
+  }
+  #click-photo {
+    display: none;
+  }
+  body {
+    background-image: none;
+  }
+
+  @page {
+    margin-right: 2pt;
+    size: A3 landscape;
+    font-size: 12pt;
+  }
+}

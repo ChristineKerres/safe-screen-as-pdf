@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OFF-SITE SCREENSAFER</title>
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <div class="title">
+      <div>safe screen as pdf</div>
+      <div id="info"></div>
+    </div>
+    <div class="button">
+      <button id="start-camera">Start Camera</button>
+      <video id="video" width="320" height="240" autoplay></video>
+      <button id="click-photo">Click Photo</button>
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="screen">
+      <div class="container">
+        <div id="item-1" class="drawer" onclick="printOne()">
+          <div id="onehover">print: screen cover</div>
+        </div>
+        <div id="item-2" class="drawer" onclick="printTwo()">
+          <div id="twohover">print: safe</div>
+        </div>
+        <div id="item-3" class="drawer" onclick="printThree()">
+          <div id="threehover">print: guard</div>
+        </div>
+        <div id="item-4" class="drawer" onclick="printFour()">
+          <div id="fourhover">print: protection</div>
+        </div>
+        <div id="item-5" class="drawer" onclick="printFive()">
+          <div id="fivehover">print: computer angel</div>
+        </div>
+        <div id="item-6" class="drawer" onclick="printSix()">
+          <div id="sixhover">print: coffee break</div>
+        </div>
+        <div id="item-7" class="drawer" onclick="printSeven()">
+          <div id="sevenhover">print: personalized</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="print">
+      <div id="one" class="onePrint">
+        <img
+          src="img/screen-cover.jpg"
+          style="height: auto; width: 100%; position: fixed; top: -30%"
+          alt=""
+        />
+        <h1 style="position: fixed; top: 90%">
+          Place it onto your screen! <br />
+          safe screen as pdf
+        </h1>
+      </div>
+
+      <div id="two" class="twoPrint">
+        <img
+          src="img/safe.jpg"
+          style="width: 65%; position: fixed; left: 20%"
+          alt=""
+        />
+        <h1 style="position: fixed; top: 90%">
+          Place it onto your screen! <br />
+          safe screen as pdf
+        </h1>
+      </div>
+
+      <div id="three" class="threePrint">
+        <img
+          src="img/screen-cat.png"
+          style="width: 70%; position: fixed; left: 12%"
+          alt=""
+        />
+        <h1 style="position: fixed; top: 90%">
+          Place it onto your screen! <br />
+          safe screen as pdf
+        </h1>
+      </div>
+
+      <div id="four" class="fourPrint">
+        <img src="img/edge-protection.png" style="width: 90%" alt="" />
+        <h1 style="position: fixed; top: 90%">
+          Place it onto your screen! <br />
+          safe screen as pdf
+        </h1>
+      </div>
+
+      <div id="five" class="fivePrint">
+        <img
+          src="img/computer-angel.jpg"
+          style="width: 40%; position: fixed; left: 25%"
+          alt=""
+        />
+        <h1 style="position: fixed; top: 90%">
+          Place it onto your screen! <br />
+          safe screen as pdf
+        </h1>
+      </div>
+
+      <div id="six" class="sixPrint">
+        <img src="img/pain-harold.webp" style="width: 95%" alt="" />
+        <h1 style="position: fixed; top: 90%">
+          Place it onto your screen! <br />
+          safe screen as pdf
+        </h1>
+      </div>
+
+      <div id="seven" class="sevenPrint">
+        <h1 style="position: fixed; top: 90%">
+          Place it onto your screen! <br />
+          safe screen as pdf
+        </h1>
+      </div>
+    </div>
+  </body>
+  <scrip src="script.js"></scrip>
+</html>
