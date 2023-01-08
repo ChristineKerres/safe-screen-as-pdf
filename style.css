@@ -1,6 +1,6 @@
 @font-face {
   font-family: NanumGothic;
-  src: url(/fonts/NanumGothicCoding-Regular.ttf);
+  src: url(fonts/NanumGothicCoding-Regular.ttf);
 }
 body {
   font-family: NanumGothic;
@@ -8,7 +8,7 @@ body {
   color: black;
   margin: 20px;
   /*background-color: rgba(145, 128, 131, 0.824);*/
-  background-image: url(/img/printer.png);
+  background-image: url(img/printer.png);
   height: 900px;
   background-repeat: no-repeat;
   background-size: 600px;
